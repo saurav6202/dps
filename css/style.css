@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    scroll-behavior: smooth;
+    width: 100vw;
+    background-color: #f3f3f3;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+.hide-scrollbar {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+.page {
+    background-color: #f3f3f3;
+}
+
+nav {
+    background-color: #2e7d32;
+    background-color: #008000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 0.2rem 1rem;
+    padding-left: 0.3rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+nav .left {
+    display: flex;
+    align-items: center;
+}
+
+nav .left img {
+    height: 3rem;
+    width: 3rem;
+    /* margin-left: 1rem; */
+}
+
+nav .left p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+nav .right ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .right ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-left: 1.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+nav .right ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #eef4db;
+    transition: width 0.2s ease;
+}
+
+nav .right ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #eef4db;
+}
+
+/*                          Image slider                         */
+.swiper {
+    height: 70vh;
+    width: 100vw;
+    position: relative;
+}
+
+.swiper-wrapper .swiper-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.swiper-pagination-bullet {
+    background-color: #10c110;
+    opacity: 1;
+    height: 0.7rem;
+    width: 0.7rem;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #14ed59;
+    height: 0.7rem;
+    width: 0.7rem;
+}
+
+.swiper-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    color: rgb(173, 247, 169);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.next-btn {
+    left: 2rem;
+}
+
+.back-btn {
+    right: 2rem;
+}
+
+/*                    About page                        */
+
+.aboutPage {
+    padding-top: 4rem;
+    max-width: 60vw;
+    display: block;
+    margin: 0 auto;
+}
+
+.aboutPage .h2div {
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutPage h2 {
+    text-align: center;
+    width: 35vw;
+    border-bottom: 2px solid black;
+    font-family: Montserrat;
+}
+
+.aboutPage .mainBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.aboutPage .top img {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 1rem;
+}
+
+.aboutPage .top .aboutText {
+    padding: 1rem;
+    width: 15rem;
+    /* height: 15rem; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: white;
+}
+
+.aboutPage .top .aboutText span {
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.aboutPage .top .aboutText p {
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+
+
+.aboutPage .bottom .box {
+    background-color: white;
+    margin-top: 2rem;
+    padding: 1rem;
+    width: 15rem;
+    /* height: 15rem; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+.aboutPage .bottom .box span {
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.aboutPage .bottom .box span i {
+    margin-right: 0.5rem;
+}
+
+.aboutPage .bottom .box p {
+    text-align: center;
+}
+
+.director{
+    margin-top: 3rem;
+}
+.director img{
+    height: 10rem;
+    width: 10rem;
+}
+
+.director .right{
+    background-color: white;
+    height: 14rem;
+    width: 14rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.chooseSection{
+    width: 100%;
+    background-color: white;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.chooseSection .iconCoc{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2.5rem;
+}
+
+.chooseSection .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.chooseSection .box i{
+    font-size: 3rem;
+}
